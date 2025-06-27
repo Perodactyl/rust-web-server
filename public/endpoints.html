@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Endpoint list</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><a href="/echo">/echo</a></td>
+			<td>Responds with the parsed request data as JSON</td>
+		</tr>
+		<tr>
+			<td><a href="/visitors">/visitors</a></td>
+			<td>Responds with the number of times a request has been made to that endpoint</td>
+		</tr>
+		<tr>
+			<td><a href="/indexof.html">/indexof.html</a></td>
+			<td>Template page used for indexing of directories</td>
+		</tr>
+		<tr>
+			<td><a href="/mutable">/mutable</a></td>
+			<td>GET: responds with the most recently set value. POST: updates the value.</td>
+		</tr>
+		<tr>
+			<td><a href="/favicon.ico">/favicon.ico</a></td>
+			<td>Always sends 200 with an empty body</td>
+		</tr>
+	</table>
+</body>
+</html>

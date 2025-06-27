@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index of {{ index.dirname }}</title>
+</head>
+<body>
+	<ul>
+		{%for item in index.items %}
+		<li>
+			{% if item.is_folder %}<img src="folder.svg" />
+			{% else %}<img src="file.svg" />{% endif %}
+			<a href="{{ item.url }}">{{ item.name }}</a></li>
+		{% endfor %}
+	</ul>
+	<style>
+		body {
+			background-color: #333;
+		}
+		ul {
+			display: flex;
+			width: 90%;
+			height: 90%;
+			flex-wrap: wrap;
+			li {
+				display: flex;
+				font-family: sans-serif;
+				padding: 5px;
+				background-color: #0003;
+				border-radius: 5px;
+				margin: 5px;
+				align-items: center;
+				a {
+					color: white;
+					text-decoration: unset;
+				}
+				img {
+					max-width: 2em;
+					margin-right: 0.2em;
+				}
+				&:hover {
+					background-color: #0002;
+				}
+			}
+		}
+	</style>
+</body>
+</html>
